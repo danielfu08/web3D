@@ -5,11 +5,15 @@
   <body>
     <a-scene>
         <a-assets>
-            <img id="nadal" src="terra.png">
+            <img id="terra" src="terra.png">
+            <img id="venus" src="venus.jpg">
         </a-assets>
         <a-sky color="#5620B0"></a-sky>
-        <a-sphere position="0 2 -5" radius="1" src="#nadal"
+        <a-sphere position="0 2 -5" radius="1" src="#terra"
            animation="property: rotation; dur: 10000;
-           to: 0 360 0; loop: true"></a-sphere>  
+           to: 0 360 0; loop: true"></a-sphere>
+        <a-sphere position="-1 2 -5" radius="1" src="#venus"
+           animation="property: rotation; dur: 10000;
+           to: 0 360 0; loop: true"></a-sphere>
     </a-scene>
   </body>
