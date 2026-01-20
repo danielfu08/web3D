@@ -1,0 +1,53 @@
+<html>
+  <head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <title>Exercici 6</title>
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+        <a-assets>
+          <img id="fons" src="fons.jpeg" />
+          <img id="texturaterra" src="terra.avif    " />
+          <img id="españa" src="esp.png" />        
+          <img id="svc" src="svc.png" />            
+          <img id="cat" src="cat.png" />
+     
+        </a-assets>
+        <a-sky src="#fons"></a-sky>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" src="#texturaterra"></a-plane>
+        <a-sphere id="esmou" position="8.65087 6.19519 -16.25227" rotation="0 0 0" radius="2" src="#españa"></a-sphere>
+        <a-cylinder id="esmou2" position="5.61718 6.9746 -11.05293" rotation="0 -50 0" radius="2" height="5" src="#svc"></a-cylinder>
+        <a-entity gltf-model="model.glb" position="0 -3 -3" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="cronos.glb" position="0 0 -3" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity gltf-model="hm.glb" position="0 -3 -3" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-sphere id="esmou3" animation="property: rotation; to: 0 360 0; dur: 4000; loop: true" position="5.726 5.82116 -6.85733" rotation="0 0 0" radius="2" src="#cat"></a-sphere>
+        </a-scene>
+        <script>
+          let unobjecte = document.querySelector("#esmou");
+          unobjecte.addEventListener("click", function () {
+            unobjecte.setAttribute("animation", {
+              property: "rotation",
+              to: "0 360 0",
+              dur: 10000
+            });
+          });
+          let dosobjecte = document.querySelector("#esmou2");
+              dosobjecte.addEventListener("click", function () {
+              dosobjecte.setAttribute("animation", {
+              property: "rotation",
+              to: "0 360 0",
+              dur: 10000
+            });
+          });
+          let tresobjecte = document.querySelector("#esmou3");
+              tresobjecte.addEventListener("click", function () {
+              tresobjecte.setAttribute("animation", {
+              property: "rotation",
+              to: "0 360 0",
+              dur: 10000
+            });
+          });
+        </script>
+
+  </body>
+</html>
